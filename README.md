@@ -2,6 +2,8 @@
 
 **Turn MCP conformance transcripts into privacy-first, visually clear evidence cards.**
 
+**Interactive preview (synthetic sample):** https://senih25.github.io/mcp-proofcanvas/ — an illustrative test transcript, not a real endpoint execution.
+
 ProofCanvas is a standalone, standard-library-only Python CLI. It reads a text transcript of MCP checks and creates a responsive, printable HTML report with a fail-closed verdict, check-by-check timeline, and a SHA-256 fingerprint **of the normalized, redacted report content**.
 
 The report is **not** independent proof that the remote tool ran. It identifies *user-supplied* results. Reviewers should reproduce tests in their own sandbox.
