@@ -1,0 +1,14 @@
+__pycache__/
+*.py[cod]
+.venv/
+.env
+.env.*
+!.env.example
+*.log
+*credential*
+*secret*
+*token*
+local-checks.txt
+redacted-evidence.html
+example-evidence.html
+.DS_Store

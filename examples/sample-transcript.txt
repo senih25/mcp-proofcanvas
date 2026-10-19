@@ -1,0 +1,13 @@
+# SYNTHETIC example; not evidence of a real execution.
+INITIALIZE = PASS | protocol=2025-11-25
+TOOL_DISCOVERY = PASS | tools available
+PLAN_IMPORT = PASS | proposal made with no effect
+UNAPPROVED_BLOCK = PASS | blocked
+WRONG_PHRASE_REJECT = PASS | mismatch rejected
+VOICE_APPROVAL = PASS | phrase matched
+EXECUTE = PASS | effect committed
+VERIFY = PASS | expected digest matched
+ROUTINE_REVIEW = PASS | no extra confirmation requested
+DRIFT_BLOCK = PASS | stale approval refused
+GATED_DELETE = PASS | guarded operation tested
+AUDIT_CHAIN = PASS | chain intact

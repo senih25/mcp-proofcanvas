@@ -1,0 +1,23 @@
+name: ProofCanvas tests
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  unit-tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Unit tests (standard library only)
+        run: python -m unittest discover -s tests -v
+      - name: Create synthetic evidence card
+        run: python proofcanvas.py --input examples/sample-transcript.txt --output example-evidence.html --strict --label "CI synthetic test"
