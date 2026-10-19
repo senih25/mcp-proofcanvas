@@ -115,6 +115,11 @@ def render_html(checks: list[dict[str, str]], summary: dict[str, object], label:
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="color-scheme" content="dark">
+<meta name="description" content="ProofCanvas turns MCP conformance checks into clear, privacy-first evidence cards. Offline and open source.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="ProofCanvas | Evidence, not assumptions">
+<meta property="og:description" content="Readable, privacy-first MCP conformance reports with honest verification boundaries.">
+<meta name="twitter:card" content="summary">
 <title>ProofCanvas | Evidence card</title>
 <style>
 :root{color-scheme:dark;font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif}
@@ -164,7 +169,7 @@ button:hover{background:#294862}button:focus-visible{outline:3px solid #d1f3fd;o
 <footer><div class="eyebrow">Redacted transcript fingerprint (SHA-256)</div>
 <div class="hash">__DIGEST__</div>
 <p class="note">Important: the hash only identifies the normalized, redacted input to this report. It is <strong>not</strong> a third-party signature, remote endpoint attestation, or proof that a test was genuinely executed. Reviewers should reproduce the checks against a disposable sandbox.</p>
-<p>No telemetry · No network requests · No user account · All data remains inside this HTML file.</p>
+<p>No app telemetry · No external assets · No user account · Self-contained HTML report.</p>
 <button type="button" onclick="window.print()">Print or save as PDF</button></footer></div></body></html>"""
     for marker, val in values.items():
         page = page.replace(marker, val)

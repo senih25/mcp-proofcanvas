@@ -66,7 +66,9 @@ class ProofCanvasTest(unittest.TestCase):
         page = pc.render_html(checks, pc.summarize(checks), "Demo")
         self.assertIn('role="progressbar"', page)
         self.assertIn('name="viewport"', page)
-        self.assertIn("No telemetry", page)
+        self.assertIn("No app telemetry", page)
+        self.assertIn('property="og:title"', page)
+        self.assertIn('name="description"', page)
         self.assertIn("not</strong> a third-party signature", page)
         self.assertEqual(page.count('<li class="check">'), 4)
 
